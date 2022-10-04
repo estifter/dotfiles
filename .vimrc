@@ -2,6 +2,7 @@ filetype on
 filetype plugin on
 filetype indent on
 
+:syntax on
 :set softtabstop=4
 :set shiftwidth=4
 :set autoindent
