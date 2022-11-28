@@ -8,10 +8,9 @@ filetype plugin indent on
 :set showmatch
 
 :set background=dark
-colorscheme solarized8_flat
+colorscheme tomorrow-night
 
 " Need to turn off spaces in Makefiles
 autocmd FileType make set noexpandtab shiftwidth=4 softtabstop=0
-
 autocmd FileType c set noexpandtab shiftwidth=4 softtabstop=0 tabstop=4
 autocmd FileType ocaml set noexpandtab shiftwidth=4 softtabstop=0 tabstop=4
