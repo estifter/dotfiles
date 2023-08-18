@@ -4,7 +4,7 @@ CLICOLOR=1
 alias ls="ls -G"
 alias ll="ls -alG"
 alias vim="nvim"
-export PATH="/opt/homebrew/opt/bison/bin:$PATH"
+export PATH="$PATH:/opt/homebrew/bin"
 
 # opam configuration
 [[ ! -r /Users/estifter/.opam/opam-init/init.zsh ]] || source /Users/estifter/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
