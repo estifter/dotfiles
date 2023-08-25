@@ -11,6 +11,7 @@ Plug 'hrsh7th/vim-vsnip'
 
 Plug 'folke/trouble.nvim'
 Plug 'nvim-lualine/lualine.nvim'
+Plug 'nvim-tree/nvim-web-devicons'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'ellisonleao/gruvbox.nvim'
 Plug 'sbdchd/neoformat'
