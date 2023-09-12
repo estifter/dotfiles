@@ -26,6 +26,7 @@ colorscheme gruvbox
 
 " Need to turn off spaces in Makefiles
 autocmd FileType make set noexpandtab shiftwidth=4 softtabstop=0 tabstop=4
+autocmd FileType sshconfig set noexpandtab shiftwidth=2 softtabstop=0 tabstop=2
 autocmd FileType vim set noexpandtab shiftwidth=2 softtabstop=0 tabstop=2
 autocmd FileType c set noexpandtab shiftwidth=4 softtabstop=0 tabstop=4
 autocmd FileType ocaml set expandtab shiftwidth=2 softtabstop=2 tabstop=4
@@ -65,15 +66,15 @@ cmp.setup({
 	end,
 	},
 	window = {
-	-- completion = cmp.config.window.bordered(),
-	-- documentation = cmp.config.window.bordered(),
+	  completion = cmp.config.window.bordered(),
+	  documentation = cmp.config.window.bordered(),
 	},
 	mapping = cmp.mapping.preset.insert({
-	['<C-b>'] = cmp.mapping.scroll_docs(-4),
-	['<C-f>'] = cmp.mapping.scroll_docs(4),
-	['<C-Space>'] = cmp.mapping.complete(),
-	['<C-e>'] = cmp.mapping.abort(),
-	['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+		['<cr>'] = cmp.mapping.scroll_docs(-4),
+		['<C-f>'] = cmp.mapping.scroll_docs(4),
+		['<C-Space>'] = cmp.mapping.complete(),
+		['<C-e>'] = cmp.mapping.abort(),
+		['<Tab>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 	}),
 	sources = cmp.config.sources({
 		{ name = 'nvim_lsp' },
@@ -111,10 +112,8 @@ cmp.setup({
 })
 
 -- Set up lspconfig.
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
-require('lspconfig')['ocamllsp'].setup {
-	capabilities = capabilities
-}
+require('lspconfig')['ocamllsp'].setup {}
+require('lspconfig')['pyright'].setup {}
 EOF
 
 augroup fmt
